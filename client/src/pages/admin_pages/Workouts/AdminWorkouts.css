@@ -1,0 +1,10 @@
+.workout-page input::placeholder,
+.workout-page textarea::placeholder {
+  color: #888;
+}
+
+.workout-page input:focus,
+.workout-page textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #B5F23D;
+}

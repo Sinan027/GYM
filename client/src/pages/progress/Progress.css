@@ -1,0 +1,196 @@
+.progress-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 150px 8% 100px;
+}
+
+.progress-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-num {
+  color: #B5F23D;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.heavy-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 60px;
+  letter-spacing: -2px;
+}
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+}
+
+.panel-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* FORM STYLING */
+.log-section {
+  background: #121212;
+  padding: 40px;
+  border: 1px solid #1a1a1a;
+}
+
+.input-block {
+  margin-bottom: 25px;
+}
+
+.input-block label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.input-block input {
+  width: 100%;
+  background: #0d0d0d;
+  border: 1px solid #222;
+  padding: 15px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.log-btn {
+  width: 100%;
+  background: #B5F23D;
+  color: #000;
+  border: none;
+  padding: 18px;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease;
+}
+
+.log-btn:hover {
+  transform: scale(1.01);
+}
+
+/* CHART & LOGS STYLING */
+.chart-section, .recent-logs {
+  background: #121212;
+  padding: 40px;
+  border: 1px solid #1a1a1a;
+  margin-bottom: 25px;
+}
+
+.chart-placeholder {
+  height: 200px;
+  position: relative;
+}
+
+.chart-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 0.65rem;
+  color: #555;
+  font-weight: 700;
+}
+
+.logs-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.log-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.log-date {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.log-data {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.log-change {
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.log-change.down { color: #B5F23D; }
+
+.log-weight {
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+/* NEW: Detailed Log Styles */
+.log-row.detailed {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.log-row.detailed .log-date {
+  color: #B5F23D;
+  font-weight: bold;
+}
+
+.log-weight-highlight {
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+
+.log-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+  .progress-grid { grid-template-columns: 1fr; }
+  .progress-page { padding: 100px 5%; }
+}
+
+@media (max-width: 768px) {
+  .heavy-title { font-size: 3rem; }
+  .input-row { grid-template-columns: 1fr; }
+  .log-details-grid { grid-template-columns: 1fr; }
+}

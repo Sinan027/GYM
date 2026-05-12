@@ -1,0 +1,21 @@
+.blog-card h3 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.blog-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.blog-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  border-color: var(--green);
+}

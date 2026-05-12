@@ -1,0 +1,8 @@
+.exercise-page input::placeholder {
+  color: #888;
+}
+
+.exercise-page input:focus {
+  outline: none;
+  border-bottom: 1px solid #B5F23D;
+}

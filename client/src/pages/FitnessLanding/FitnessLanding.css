@@ -1,0 +1,193 @@
+:root {
+  --inspire-neon: #B5F23D;
+  --inspire-black: #000000;
+  --inspire-gray-card: #1a1b14;
+  --inspire-text-dim: #a0a0a0;
+}
+
+.inspire-wrapper {
+  background-color: var(--inspire-black);
+  color: #ffffff;
+  padding: 80px 5%;
+  overflow: hidden;
+}
+
+/* Titles */
+.inspire-main-title, .inspire-section-title {
+  text-align: center;
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.inspire-highlight {
+  color: var(--inspire-neon);
+}
+
+.inspire-subtitle {
+  text-align: center;
+  color: var(--inspire-text-dim);
+  max-width: 650px;
+  margin: 0 auto 60px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Feature Card Styling */
+.inspire-feature-card {
+  background-color: var(--inspire-gray-card);
+  border-radius: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.inspire-feature-grid {
+  flex: 1.2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 80px;
+}
+
+.inspire-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.inspire-icon-circle {
+  background: #2b2d1d;
+  color: var(--inspire-neon);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Image with fade-out effect */
+.inspire-image-box {
+  flex: 0.8;
+  background: #000;
+}
+
+.inspire-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to left, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 60%, transparent 100%);
+}
+
+/* Discover Grid */
+.inspire-discover {
+  margin-top: 120px;
+}
+
+.inspire-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.inspire-plan-card {
+  background: linear-gradient(145deg, #12130e, #050505);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 35px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.inspire-plan-card:hover {
+  border-color: var(--inspire-neon);
+  transform: translateY(-10px);
+}
+
+.inspire-plan-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.inspire-plan-icon {
+  color: var(--inspire-neon);
+}
+
+.inspire-plan-card p {
+  color: var(--inspire-text-dim);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.inspire-see-plan-btn {
+  background: var(--inspire-neon);
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 800;
+  font-size: 0.8rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+/* Pagination */
+.inspire-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 50px;
+}
+
+.inspire-dot {
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+}
+
+.inspire-dot.inspire-active {
+  background: var(--inspire-neon);
+  width: 30px;
+  border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1100px) {
+  .inspire-feature-card {
+    flex-direction: column;
+  }
+  .inspire-image-box {
+    height: 400px;
+  }
+  .inspire-image-box img {
+    mask-image: linear-gradient(to top, black 60%, transparent 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .inspire-feature-grid {
+    grid-template-columns: 1fr;
+    padding: 40px;
+    gap: 25px;
+  }
+  .inspire-plan-card {
+    padding-bottom: 80px; /* Space for the button */
+  }
+}

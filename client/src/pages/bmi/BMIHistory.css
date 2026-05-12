@@ -1,0 +1,155 @@
+.bmi-history-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 120px 8% 80px 8%;
+  font-family: 'Inter', sans-serif;
+}
+
+.bmi-history-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bmi-history-header {
+  margin-bottom: 60px;
+}
+
+.back-btn {
+  background: transparent;
+  color: #888;
+  border: none;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.back-btn:hover {
+  color: #B5F23D;
+}
+
+.error-state, .empty-state, .loading-state {
+  background-color: #121212;
+  border: 1px solid #1a1a1a;
+  padding: 60px 20px;
+  border-radius: 12px;
+  text-align: center;
+  color: #888;
+  font-weight: 500;
+}
+
+.login-link-btn {
+  margin-top: 20px;
+  background-color: #B5F23D;
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  font-weight: 900;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.history-card {
+  background-color: #121212;
+  border: 1px solid #222;
+  border-radius: 12px;
+  padding: 25px;
+  transition: transform 0.2s;
+}
+
+.history-card:hover {
+  transform: translateX(10px);
+  border-color: #333;
+}
+
+.history-date {
+  color: #666;
+  font-size: 0.85rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #222;
+  padding-bottom: 10px;
+}
+
+.history-metrics {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 25px;
+}
+
+.metric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: #888;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ccc;
+}
+
+.history-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d0d0d;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border-left: 4px solid #B5F23D;
+}
+
+.result-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.result-label {
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 800;
+}
+
+.result-score {
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.status-pill {
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .bmi-history-page {
+    padding: 100px 20px 40px 20px;
+  }
+  .history-metrics {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .history-result {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

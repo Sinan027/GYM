@@ -1,0 +1,241 @@
+.profile-page {
+  min-height: 100vh;
+  background-color: #050505;
+  color: white;
+  padding: 120px 20px 60px;
+}
+
+.profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.status-badge {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.status-badge.unlocked {
+  background: rgba(181, 242, 61, 0.1);
+  color: #B5F23D;
+  border: 1px solid #B5F23D;
+}
+
+.status-badge.locked {
+  background: rgba(255, 77, 77, 0.1);
+  color: #FF4D4D;
+  border: 1px solid #FF4D4D;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.dashboard-card {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.wide-card {
+  grid-column: 1 / -1;
+}
+
+.dashboard-card h3 {
+  font-size: 1.2rem;
+  color: #B5F23D;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+/* Account Details Form */
+.account-details .brutalist-form .input-field {
+  margin-bottom: 15px;
+}
+
+.account-details .brutalist-form label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.account-details .brutalist-form input {
+  width: 100%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.account-details .brutalist-form input:focus {
+  outline: none;
+  border-color: #B5F23D;
+}
+
+.save-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.save-btn:hover {
+  background: #B5F23D;
+}
+
+/* Tracker */
+.tracker-desc {
+  color: #888;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 6px;
+  border-left: 4px solid #333;
+}
+
+.check-item.complete {
+  border-left-color: #B5F23D;
+}
+
+.check-item .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #333;
+}
+
+.check-item.complete .indicator {
+  background: #B5F23D;
+  box-shadow: 0 0 10px rgba(181, 242, 61, 0.5);
+}
+
+.check-content h4 {
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.check-content span {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.check-item.complete .check-content span {
+  color: #B5F23D;
+}
+
+/* History Lists */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #222;
+}
+
+.history-info h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.history-info span {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.history-meta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.payment-method {
+  font-size: 0.85rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.status-pill {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.status-pill.pending {
+  background: rgba(255, 159, 67, 0.1);
+  color: #FF9F43;
+}
+
+.status-pill.confirmed {
+  background: rgba(181, 242, 61, 0.1);
+  color: #B5F23D;
+}
+
+.empty-msg {
+  color: #888;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  .profile-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .history-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}

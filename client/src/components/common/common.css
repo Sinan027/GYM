@@ -1,0 +1,11 @@
+.btn {
+  background: var(--green);
+  color: black;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+}

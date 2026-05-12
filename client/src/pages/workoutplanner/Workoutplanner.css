@@ -1,0 +1,376 @@
+.planner-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 8%;
+}
+
+.planner-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* Header */
+.planner-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 80px;
+}
+
+.section-id {
+  color: #B5F23D;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.heavy-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.instruction-text {
+  max-width: 320px;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: right;
+}
+
+/* Layout Grid */
+.planner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.column-label {
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* Exercise Bank */
+.exercise-bank {
+  background: #121212;
+  padding: 40px;
+  border: 1px solid #1a1a1a;
+}
+
+.exercise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #1a1a1a;
+  cursor: grab;
+}
+
+.ex-name {
+  display: block;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.ex-cat {
+  font-size: 0.65rem;
+  color: #444;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.drag-handle {
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* Schedule */
+.schedule-section {
+  background: #121212;
+  padding: 40px;
+  border: 1px solid #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+.day-slot {
+  margin-bottom: 25px;
+}
+
+.day-name {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #B5F23D;
+  margin-bottom: 10px;
+}
+
+.drop-zone {
+  background: #0d0d0d;
+  border: 1px dashed #1a1a1a;
+  padding: 15px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.drop-hint {
+  color: #333;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Save Button */
+.save-btn {
+  background-color: #B5F23D;
+  color: #000;
+  border: none;
+  padding: 20px;
+  font-weight: 900;
+  font-size: 1rem;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.save-btn:hover {
+  transform: scale(1.01);
+}
+
+/* Add these to your existing Workoutplanner.css */
+
+.drop-zone {
+  background: #0d0d0d;
+  border: 1px dashed #1a1a1a;
+  padding: 15px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.drop-zone.has-items {
+  border-style: solid;
+  border-color: #333;
+}
+
+.scheduled-exercises {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.planned-exercise-tag {
+  background: #1a1a1a;
+  border: 1px solid #B5F23D;
+  color: #fff;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+}
+
+.remove-ex {
+  background: transparent;
+  border: none;
+  color: #B5F23D;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.remove-ex:hover {
+  color: #fff;
+}
+
+/* Visual feedback when dragging over */
+.day-slot:active .drop-zone {
+  border-color: #B5F23D;
+  background: #111;
+}
+
+.planner-page {
+  background-color: #050505;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 5% 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Overlay for texture */
+.planner-bg-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(181, 242, 61, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.planner-container { position: relative; z-index: 2; }
+
+.heavy-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.85;
+  letter-spacing: -4px;
+  margin-top: 10px;
+}
+
+.section-id { color: #B5F23D; font-weight: 800; font-size: 0.8rem; }
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+/* Exercise Bank Cards */
+.exercise-item-card {
+  position: relative;
+  height: 80px;
+  background: #111;
+  margin-bottom: 12px;
+  border: 1px solid #222;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  cursor: grab;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.exercise-item-card:hover {
+  border-color: #B5F23D;
+  transform: translateX(10px);
+}
+
+.card-bg-img {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  filter: grayscale(100%);
+  transition: 0.3s;
+}
+
+.exercise-item-card:hover .card-bg-img {
+  opacity: 0.5;
+  filter: grayscale(0%);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(90deg, #000 30%, transparent);
+}
+
+.card-info { position: relative; z-index: 2; }
+
+.ex-cat-tag {
+  color: #B5F23D;
+  font-size: 0.6rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.ex-name-text {
+  font-size: 1.1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.drag-icon { margin-left: auto; color: #333; z-index: 2; }
+
+/* Weekly Protocol Slots */
+.day-slot-box {
+  background: #0a0a0a;
+  border-bottom: 1px solid #1a1a1a;
+  padding: 20px;
+}
+
+.day-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.day-name-title { font-weight: 900; color: #444; letter-spacing: 2px; }
+
+.count-badge {
+  background: #1a1a1a;
+  color: #B5F23D;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 900;
+}
+
+.drop-zone-area {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.empty-hint {
+  color: #222;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
+
+.planned-tag {
+  background: #B5F23D;
+  color: #000;
+  padding: 4px 12px;
+  font-weight: 900;
+  font-size: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%); /* Angular "Sport" look */
+}
+
+.btn-remove {
+  background: none; border: none; font-weight: 900; cursor: pointer;
+}
+
+.btn-finalize {
+  width: 100%;
+  margin-top: 30px;
+  background: #B5F23D;
+  border: none;
+  padding: 20px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-finalize:hover {
+  background: #fff;
+  transform: scale(1.01);
+}
+
+@media (max-width: 900px) {
+  .planner-grid { grid-template-columns: 1fr; }
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .planner-grid { grid-template-columns: 1fr; }
+  .planner-header { flex-direction: column; align-items: flex-start; }
+  .instruction-text { text-align: left; margin-top: 20px; }
+}

@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+    --neon: #B5F23D;
+    --black: #0D0D0D;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.page-wrapper {
+    background-color: var(--black);
+    color: var(--white);
+    overflow-x: hidden;
+}
+
+/* HERO REMAINS THE SAME */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    position: relative;
+    background: linear-gradient(90deg,
+            rgba(13, 13, 13, 1) 25%,
+            rgba(13, 13, 13, 0.4) 100%),
+        url("https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=80&w=1075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+}
+
+.kicker {
+    color: var(--neon);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+.main-title {
+    font-size: clamp(3.5rem, 11vw, 9rem);
+    font-weight: 900;
+    line-height: 0.85;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+/* .text-highlight {
+    color: var(--neon);
+} */
+
+.description {
+    max-width: 540px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #BBBBBB;
+    margin-bottom: 3rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 5rem;
+}
+
+.btn-solid,
+.btn-outline {
+    padding: 1.1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: var(--transition);
+    text-transform: uppercase;
+}
+
+.btn-solid {
+    background: var(--neon);
+    border: 1px solid var(--neon);
+    color: black;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #444;
+    color: var(--white);
+}
+
+.hero-stats {
+    display: flex;
+    gap: 60px;
+}
+
+.stat-number {
+    display: block;
+    font-size: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 900;
+    color: var(--neon);
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--gray);
+}
+
+/* NEW: FULL STYLED GREEN SCROLL BAR */
+.marquee-green-bar {
+    width: 100%;
+    padding: 10px 10px;
+    background: var(--neon);
+    /* Vibrant Green Background */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.marquee-content {
+    display: flex;
+    white-space: nowrap;
+    animation: scroll-text 20s linear infinite;
+}
+
+.marquee-content span {
+    font-size: clamp(2.5rem, 6vw, 1.5rem);
+    font-weight: 750;
+    text-transform: uppercase;
+    color: #000;
+    /* High contrast black text on green */
+    padding-right: 80px;
+    letter-spacing: -1px;
+}
+
+/* Styling for the new ticker items */
+.ticker-item {
+  font-size: clamp(2rem, 5vw, 4rem); /* Slightly smaller than 'GO HARDER' to fit more items */
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #000;
+  padding-right: 20px;
+  letter-spacing: -1px;
+}
+
+.ticker-dot {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: #000;
+  padding-right: 40px;
+  opacity: 0.6; /* Subtle styling for the diamond separator */
+}
+
+/* Adjust animation speed if it feels too fast with the extra text */
+.marquee-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll-text 30s linear infinite; /* Increased to 30s for better readability */
+}
+
+/* The container for the word HARDER */
+.underline-style {
+  position: relative;
+  display: inline-block; /* Required for pseudo-element positioning */
+  color: #B5F23D; /* Your signature green */
+}
+
+/* Optional: Different look for logout */
+.btn-solid.logout {
+    background: transparent;
+    border: 1px solid var(--neon);
+    color: var(--neon);
+}
+
+.btn-solid.logout:hover {
+    background: var(--neon);
+    color: black;
+}
+
+
+/* Ensure the loop is seamless */
+@keyframes scroll-text {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Changed to -50% because we duplicated the list once */
+}
+
+@keyframes scroll-text {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-33.33%);
+    }
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 120px 5% 60px;
+    }
+
+    .cta-group {
+        flex-direction: column;
+    }
+
+    .hero-stats {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+
+    .main-title {
+        font-size: 3.5rem;
+    }
+
+    .marquee-green-bar {
+        padding: 0px 0;
+    }
+}

@@ -1,0 +1,22 @@
+.workout-card h3 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.workout-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.workout-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 20px;
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.workout-card:hover {
+  border-color: var(--green);
+  transform: translateY(-5px);
+}

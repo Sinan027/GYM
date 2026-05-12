@@ -1,0 +1,133 @@
+.calc-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 10%;
+}
+
+.calc-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.calc-header .kicker {
+  color: #B5F23D;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.calc-header h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 50px;
+}
+
+.calc-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+}
+
+/* INPUT STYLING */
+.input-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.input-group {
+  margin-bottom: 25px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #666;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.input-group input, 
+.input-group select {
+  width: 100%;
+  background: #151515;
+  border: 1px solid #222;
+  padding: 18px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+  border-color: #B5F23D;
+}
+
+/* RESULTS STYLING */
+.results-label {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #666;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.result-card {
+  background: #151515;
+  border: 1px solid #222;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.res-title {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #888;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.res-value {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.accent-bar {
+  width: 30px;
+  height: 8px;
+  background: #B5F23D;
+}
+
+.res-value h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.res-value span {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.res-desc {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .calc-grid {
+    grid-template-columns: 1fr;
+  }
+  .calc-page {
+    padding: 60px 5%;
+  }
+}

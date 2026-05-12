@@ -1,0 +1,134 @@
+.admin-bmi-page {
+  flex: 1;
+  padding: 30px;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.admin-loading, .admin-error, .admin-empty {
+  padding: 40px;
+  background: #1a1a1a;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  font-weight: 500;
+}
+
+.admin-bmi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.admin-bmi-card {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.admin-bmi-card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px solid #222;
+  padding-bottom: 15px;
+}
+
+.user-info h3 {
+  margin: 0 0 5px 0;
+  color: #B5F23D;
+  font-size: 1.1rem;
+}
+
+.user-email {
+  margin: 0;
+  color: #888;
+  font-size: 0.8rem;
+}
+
+.date-info {
+  font-size: 0.75rem;
+  color: #666;
+  text-align: right;
+  background: #222;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.card-metrics {
+  display: flex;
+  justify-content: space-between;
+  background: #0d0d0d;
+  padding: 15px;
+  border-radius: 6px;
+}
+
+.metric-box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.m-label {
+  font-size: 0.65rem;
+  color: #666;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.m-val {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #ccc;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.admin-delete-btn {
+  background-color: #ff333320;
+  color: #ff3333;
+  border: 1px solid #ff3333;
+  padding: 8px 15px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-delete-btn:hover {
+  background-color: #ff3333;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .admin-bmi-page {
+    padding: 15px;
+  }
+  .admin-bmi-grid {
+    grid-template-columns: 1fr;
+  }
+}

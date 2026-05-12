@@ -1,0 +1,20 @@
+.meal-card h3 {
+  color: var(--green);
+}
+
+.meal-card p {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.meal-card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: 0.3s;
+}
+
+.meal-card:hover {
+  border-color: var(--green);
+}

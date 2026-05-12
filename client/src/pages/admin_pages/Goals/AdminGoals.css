@@ -1,0 +1,73 @@
+.admin-layout {
+  display: flex;
+}
+
+/* Page */
+.goals-page {
+  flex: 1;
+  padding: 40px;
+  background: #0d0d0d;
+  min-height: 100vh;
+  color: white;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+/* Search */
+.search {
+  width: 100%;
+  padding: 12px;
+  background: #111;
+  border: 1px solid #1a1a1a;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Table */
+.table {
+  border: 1px solid #1a1a1a;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr 1fr;
+  padding: 15px;
+  border-bottom: 1px solid #1a1a1a;
+  align-items: center;
+}
+
+.header {
+  background: #020617;
+  color: #B5F23D;
+  font-weight: bold;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #38bdf8;
+  color: black;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+}

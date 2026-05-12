@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--black);
+  color: var(--text);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: var(--card2);
+  border: 1px solid var(--border);
+  color: white;
+}
+
+button {
+  background: var(--green);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}

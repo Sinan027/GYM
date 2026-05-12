@@ -1,0 +1,112 @@
+.admin-page {
+  background-color: #050505;
+  min-height: 100vh;
+  padding: 120px 40px 60px;
+  color: #fff;
+}
+
+.admin-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.admin-card {
+  background: #0a0a0a;
+  border: 2px solid #1a1a1a;
+  padding: 30px;
+}
+
+.full-width {
+  grid-column: span 3;
+}
+
+.admin-value {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #B5F23D;
+  margin: 10px 0;
+}
+
+/* Table Styles */
+.brutalist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.brutalist-table th {
+  text-align: left;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: #444;
+  padding: 15px 10px;
+  border-bottom: 1px solid #222;
+}
+
+.brutalist-table td {
+  padding: 20px 10px;
+  border-bottom: 1px solid #111;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.status-tag {
+  font-size: 0.6rem;
+  padding: 4px 8px;
+  font-weight: 900;
+}
+
+.status-tag.active { background: #B5F23D; color: #000; }
+.status-tag.standby { background: #333; color: #fff; }
+
+.table-btn {
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.table-btn:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Alert Section */
+.alert-item {
+  border-left: 4px solid #333;
+  padding: 15px;
+  background: #111;
+  margin-top: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.alert-item.urgent {
+  border-left-color: #ff3e3e;
+}
+
+.admin-action-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 15px 30px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  cursor: pointer;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
+}

@@ -1,0 +1,305 @@
+/* ── Page shell ── */
+.blog-page {
+  background: #0d0d0d;
+  color: #fff;
+  min-height: 100vh;
+  padding: 100px 8%;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+.blog-container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ── Header ── */
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.section-num {
+  color: #B5F23D;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+}
+
+.heavy-title {
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 0.85;
+}
+
+.header-desc {
+  max-width: 300px;
+  color: #777;
+}
+
+/* ── Demo badge ── */
+.demo-badge {
+  background: #1a1a00;
+  border: 1px solid rgba(181, 242, 61, 0.2);
+  color: #B5F23D;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+/* ── IMAGE UTILITY CLASSES ── */
+/* Wrapper — controls the box size & clips overflow */
+.featured-image-box,
+.small-card-top,
+.modal-img-box {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a; /* neutral bg visible when image doesn't fill box */
+}
+
+/* The <img> fills the wrapper */
+.card-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* object-fit: contain — full image always visible, letterboxed */
+.card-img--contain {
+  object-fit: contain;
+  object-position: center;
+}
+
+/* object-fit: cover — fills the box, may crop (keep this class if you ever want to switch back) */
+.card-img--cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ── Featured post ── */
+.featured-post {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+  cursor: pointer;
+}
+
+.featured-image-box {
+  height: 400px;
+  filter: grayscale(100%);
+  transition: filter 0.4s;
+}
+
+.featured-post:hover .featured-image-box {
+  filter: grayscale(0%);
+}
+
+.featured-content {
+  padding: 20px;
+}
+
+.post-category {
+  color: #B5F23D;
+  font-weight: 900;
+  font-size: 0.75rem;
+}
+
+.post-title {
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+.post-desc {
+  color: #aaa;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.meta-dot {
+  width: 4px;
+  height: 4px;
+  background: #B5F23D;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* ── Secondary grid ── */
+.secondary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.small-post-card {
+  background: #111;
+  border: 1px solid #1a1a1a;
+  cursor: pointer;
+  transition: transform 0.3s;
+  overflow: hidden;
+}
+
+.small-post-card:hover {
+  transform: translateY(-8px);
+}
+
+.small-card-top {
+  height: 180px;
+  filter: grayscale(100%);
+  transition: filter 0.4s;
+}
+
+.small-post-card:hover .small-card-top {
+  filter: grayscale(0%);
+}
+
+.small-card-body {
+  padding: 20px;
+}
+
+.small-post-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin: 8px 0;
+}
+
+.small-post-desc {
+  color: #777;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.read-time {
+  color: #B5F23D;
+  font-size: 0.75rem;
+}
+
+/* ── Modal ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #111;
+  border: 1px solid #222;
+  max-width: 700px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: 1px solid #333;
+  color: #fff;
+  font-size: 1.4rem;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: #1a1a1a;
+}
+
+.modal-img-box {
+  height: 280px;
+  width: 100%;
+  background: #1a1a1a;
+}
+
+.modal-body {
+  padding: 28px 32px 36px;
+}
+
+.modal-title {
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 12px 0 8px;
+}
+
+.modal-meta {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+.modal-text {
+  line-height: 1.7;
+  color: #bbb;
+  white-space: pre-wrap;
+}
+
+/* ── States ── */
+.loading-state,
+.error-state,
+.empty-state {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  padding: 60px 20px;
+  border: 1px dashed #222;
+  margin-top: 40px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .featured-post {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .featured-image-box {
+    height: 260px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-page {
+    padding: 80px 5%;
+  }
+
+  .heavy-title {
+    font-size: 2.8rem;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+}
