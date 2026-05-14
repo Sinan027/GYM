@@ -28,7 +28,7 @@ exports.getNutritionById = async (req, res) => {
 const getImageUrl = (req) => {
   if (req.file) {
     if (req.file.path.startsWith("http")) return req.file.path;
-    return `${import.meta.env.VITE_BACKEND_URL}/uploads/${req.file.filename}`;
+    return `${process.env.BACKEND_URL}/uploads/${req.file.filename}`;
   }
   return req.body.imageUrl || undefined;
 };
